@@ -256,9 +256,6 @@ Todas las peticiones a endpoints protegidos requieren un token JWT válido en el
 ## 📄 Documentación
 
 - **API Interactiva**: Accede a la documentación Swagger en `http://localhost:8080/swagger-ui.html`
-- **Base de Datos**: El archivo `backup_universidad.sql` contiene un respaldo completo de la estructura y datos iniciales
-- **Manual Técnico**: Consulta `manualTecnico.pdf` para información detallada sobre la arquitectura e implementación
-
 ## 👨‍💻 Autor
 
 <div align="center">
