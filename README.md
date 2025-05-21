@@ -109,8 +109,6 @@ mi-proyecto-spring-boot/
 │
 ├── .mvn/                            # Configuración Maven
 ├── target/                          # Archivos compilados 
-├── backup_universidad.sql           # Script respaldo BD
-├── manualTecnico.pdf                # Documentación técnica
 ├── .gitignore                       # Configuración Git
 ├── mvnw                             # Maven Wrapper (Unix)
 ├── mvnw.cmd                         # Maven Wrapper (Windows)
