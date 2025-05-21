@@ -1,4 +1,4 @@
-# 🎓 Sistema de Gestión Universitaria
+# Sistema de Gestión Universitaria
 
 <div align="center">
 
@@ -13,99 +13,70 @@
 
 </div>
 
-> API REST desarrollada con Spring Boot 3.x para la administración completa de entidades universitarias, incluyendo estudiantes, docentes, materias e inscripciones. Implementa seguridad con JWT y alto rendimiento con caché Redis.
+Sistema de gestión académica desarrollado con Spring Boot 3.x para la administración integral de entidades universitarias, incluyendo estudiantes, docentes, materias e inscripciones. Implementa mecanismos de seguridad mediante JWT y optimización de rendimiento con caché Redis.
 
-## 📑 Tabla de Contenido
+## Índice
 
-- [Características](#-características)
-- [Tecnologías](#-tecnologías)
-- [Estructura del Proyecto](#-estructura-del-proyecto)
-- [Configuración](#️-configuración)
-- [Seguridad y Roles](#️-seguridad-y-roles)
-- [API Endpoints](#-api-endpoints)
-   - [Inscripciones](#inscripciones)
-   - [Estudiantes](#estudiantes)
-   - [Docentes](#docentes)
-   - [Evaluaciones de Docente](#evaluaciones-de-docente)
-   - [Materias](#materias)
-   - [Autenticación](#autenticación)
-   - [Otros Endpoints](#otros-endpoints)
-- [Instalación y Ejecución](#-instalación-y-ejecución)
-- [Documentación](#-documentación)
-- [Autor](#-autor)
+- [Características Principales](#características-principales)
+- [Tecnologías Implementadas](#tecnologías-implementadas)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Configuración del Sistema](#configuración-del-sistema)
+- [Seguridad y Control de Acceso](#seguridad-y-control-de-acceso)
+- [Endpoints de la API](#endpoints-de-la-api)
+   - [Gestión de Inscripciones](#gestión-de-inscripciones)
+   - [Gestión de Estudiantes](#gestión-de-estudiantes)
+   - [Gestión de Docentes](#gestión-de-docentes)
+   - [Sistema de Evaluación Docente](#sistema-de-evaluación-docente)
+   - [Administración de Materias](#administración-de-materias)
+   - [Sistema de Autenticación](#sistema-de-autenticación)
+   - [Endpoints Adicionales](#endpoints-adicionales)
+- [Instalación y Despliegue](#instalación-y-despliegue)
+- [Documentación Técnica](#documentación-técnica)
+- [Información del Desarrollador](#información-del-desarrollador)
 
-## ✨ Características
+## Características Principales
 
-- Gestión completa de estudiantes, docentes y materias
-- Sistema de inscripciones con validaciones
-- Autenticación y autorización basada en JWT
-- Caché con Redis para operaciones de alta demanda
-- API RESTful con documentación interactiva (Swagger)
-- Validaciones personalizadas
-- Arquitectura en capas
+- Administración integral de estudiantes, docentes y materias
+- Sistema robusto de inscripciones con validaciones
+- Implementación de autenticación y autorización mediante JWT
+- Optimización de rendimiento mediante caché Redis
+- API RESTful documentada (Swagger)
+- Sistema de validaciones personalizado
+- Arquitectura por capas
 
-## 🚀 Tecnologías
+## Tecnologías Implementadas
 
-| Tecnología | Versión | Propósito |
-|------------|---------|-----------|
-| Java | 21 | Lenguaje de programación |
-| Spring Boot | 3.2.5 | Framework principal |
-| Spring Security | - | Seguridad y autenticación |
-| JWT | - | Tokens de seguridad |
+| Tecnología | Versión | Función Principal |
+|------------|---------|-------------------|
+| Java | 21 | Lenguaje base de desarrollo |
+| Spring Boot | 3.2.5 | Framework de desarrollo |
+| Spring Security | - | Marco de seguridad |
+| JWT | - | Autenticación mediante tokens |
 | Spring Data JPA | - | Persistencia de datos |
-| PostgreSQL | Latest | Base de datos relacional |
+| PostgreSQL | Latest | Sistema de base de datos |
 | Redis | Latest | Sistema de caché |
 | Swagger OpenAPI | - | Documentación de API |
-| Lombok | - | Reducción de código boilerplate |
+| Lombok | - | Optimización de desarrollo |
 | Maven | - | Gestión de dependencias |
 
-## 📂 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 mi-proyecto-spring-boot/
 ├── src/
 │   └── main/
 │       ├── java/com/universidad/
-│       │   ├── config/              # Configuración global 
-│       │   ├── controller/          # Controladores REST
-│       │   │   ├── DocenteController.java
-│       │   │   ├── EstudianteController.java
-│       │   │   ├── EvaluacionDocenteController.java
-│       │   │   ├── InscripcionController.java
-│       │   │   ├── MateriaController.java
-│       │   │   └── TestController.java
-│       │   ├── dto/                 # Data Transfer Objects
-│       │   │   ├── DocenteDTO.java
-│       │   │   ├── EstudianteDTO.java
-│       │   │   ├── InscripcionDTO.java
-│       │   │   └── MateriaDTO.java
-│       │   ├── model/               # Entidades JPA
-│       │   │   ├── Docente.java
-│       │   │   ├── Estudiante.java
-│       │   │   ├── EvaluacionDocente.java
-│       │   │   ├── Inscripcion.java
-│       │   │   ├── Materia.java
-│       │   │   └── Persona.java
-│       │   ├── registro/            # Autenticación y seguridad
-│       │   │   ├── config/
-│       │   │   ├── controller/
-│       │   │   ├── dto/
-│       │   │   ├── model/
-│       │   │   ├── repository/
-│       │   │   ├── security/
-│       │   │   └── service/
-│       │   ├── repository/          # Interfaces JPA
-│       │   ├── service/             # Servicios de negocio
-│       │   │   ├── impl/
-│       │   │   ├── IDocenteService.java
-│       │   │   ├── IEstudianteService.java
-│       │   │   ├── IEvaluacionDocenteService.java
-│       │   │   ├── IInscripcionService.java
-│       │   │   └── IMateriaService.java
-│       │   ├── validation/          # Validadores
-│       │   └── UniversidadApplication.java  # Clase principal
+│       │   ├── config/              
+│       │   ├── controller/          
+│       │   ├── dto/                 
+│       │   ├── model/                
+│       │   ├── registro/            
+│       │   ├── repository/          
+│       │   ├── service/             
+│       │   ├── validation/          
+│       │   └── UniversidadApplication.java
 │       └── resources/
-│           └── application.properties # Configuración
+│           └── application.properties
 │
 ├── .mvn/                            # Configuración Maven
 ├── target/                          # Archivos compilados 
@@ -115,43 +86,43 @@ mi-proyecto-spring-boot/
 └── pom.xml                          # Dependencias Maven
 ```
 
-## ⚙️ Configuración
+## Configuración del Sistema
 
-Edita el archivo `src/main/resources/application.properties` para ajustar la configuración:
+El archivo `src/main/resources/application.properties` contiene la configuración principal:
 
 ```properties
-# Base de datos PostgreSQL
+# Configuración PostgreSQL
 spring.datasource.url=jdbc:postgresql://localhost:5432/universidad
-spring.datasource.username=tu_usuario
-spring.datasource.password=tu_contraseña
+spring.datasource.username=usuario_bd
+spring.datasource.password=contraseña_bd
 spring.jpa.hibernate.ddl-auto=update
 
-# Swagger UI
+# Configuración Swagger
 springdoc.swagger-ui.path=/swagger-ui.html
 
-# Redis para caché
+# Configuración Redis
 spring.cache.type=redis
 spring.redis.host=localhost
 spring.redis.port=6379
 
 # Configuración JWT
-app.jwtSecret=tu_clave_secreta_jwt
+app.jwtSecret=clave_secreta_jwt
 app.jwtExpirationMs=86400000
 ```
 
-## 🛡️ Seguridad y Roles
+## Seguridad y Control de Acceso
 
-El sistema implementa seguridad basada en roles con Spring Security:
+El sistema implementa tres niveles de acceso:
 
-- **ADMIN**: Acceso total a todas las funcionalidades
-- **DOCENTE**: Gestión de materias y calificaciones
-- **ESTUDIANTE**: Consulta de materias e inscripciones
+- **Administrador**: Acceso completo al sistema
+- **Docente**: Gestión de materias y evaluaciones
+- **Estudiante**: Consulta de información académica
 
-Todas las peticiones a endpoints protegidos requieren un token JWT válido en el encabezado (`Authorization: Bearer [token]`).
+Las solicitudes a endpoints protegidos requieren autenticación mediante token JWT.
 
-## 📡 API Endpoints
+## Endpoints de la API
 
-### Inscripciones
+### Gestión de Inscripciones
 
 | Método | Ruta | Descripción | Roles |
 |--------|------|-------------|-------|
@@ -163,7 +134,7 @@ Todas las peticiones a endpoints protegidos requieren un token JWT válido en el
 | GET | `/api/inscripciones/materia/{idMateria}` | Obtener inscripciones por ID de materia | ADMIN, DOCENTE |
 | GET | `/api/inscripciones/estudiante/{idEstudiante}` | Obtener inscripciones por ID de estudiante | ADMIN, DOCENTE, ESTUDIANTE |
 
-### Estudiantes
+### Gestión de Estudiantes
 
 | Método | Ruta | Descripción | Roles |
 |--------|------|-------------|-------|
@@ -176,7 +147,7 @@ Todas las peticiones a endpoints protegidos requieren un token JWT válido en el
 | GET | `/api/estudiantes/inscripcion/{numeroInscripcion}` | Obtener estudiante por número de inscripción | ADMIN, DOCENTE |
 | GET | `/api/estudiantes/activos` | Obtener estudiantes activos | ADMIN, DOCENTE |
 
-### Docentes
+### Gestión de Docentes
 
 | Método | Ruta | Descripción | Roles |
 |--------|------|-------------|-------|
@@ -187,7 +158,7 @@ Todas las peticiones a endpoints protegidos requieren un token JWT válido en el
 | GET | `/api/docentes/{nroEmpleado}/materias` | Obtener materias asignadas a docente | ADMIN, DOCENTE |
 | GET | `/api/docentes/empleado/{nroEmpleado}` | Obtener docente por número de empleado | ADMIN, DOCENTE |
 
-### Evaluaciones de Docente
+### Sistema de Evaluación Docente
 
 | Método | Ruta | Descripción | Roles |
 |--------|------|-------------|-------|
@@ -196,7 +167,7 @@ Todas las peticiones a endpoints protegidos requieren un token JWT válido en el
 | DELETE | `/api/evaluaciones-docente/{id}` | Eliminar evaluación por ID | ADMIN |
 | GET | `/api/evaluaciones-docente/docente/{docenteId}` | Obtener evaluaciones de un docente | ADMIN, DOCENTE |
 
-### Materias
+### Administración de Materias
 
 | Método | Ruta | Descripción | Roles |
 |--------|------|-------------|-------|
@@ -205,7 +176,7 @@ Todas las peticiones a endpoints protegidos requieren un token JWT válido en el
 | PUT | `/api/materias/{id}` | Actualizar materia | ADMIN, DOCENTE |
 | DELETE | `/api/materias/{id}` | Eliminar materia | ADMIN |
 
-### Autenticación
+### Sistema de Autenticación
 
 | Método | Ruta | Descripción | Acceso |
 |--------|------|-------------|--------|
@@ -214,7 +185,7 @@ Todas las peticiones a endpoints protegidos requieren un token JWT válido en el
 | POST | `/api/auth/logout` | Cerrar sesión | Autenticado |
 | GET | `/api/auth/session-info` | Información de la sesión actual | Autenticado |
 
-### Otros Endpoints
+### Endpoints Adicionales
 
 | Método | Ruta | Descripción | Acceso |
 |--------|------|-------------|--------|
@@ -224,7 +195,7 @@ Todas las peticiones a endpoints protegidos requieren un token JWT válido en el
 | GET | `/api/docentes/test` | Endpoint de prueba para docentes | DOCENTE |
 | GET | `/api/admin/test` | Endpoint de prueba para administradores | ADMIN |
 
-## 📦 Instalación y Ejecución
+## Instalación y Despliegue
 
 1. **Clona el repositorio:**
    ```bash
@@ -251,10 +222,11 @@ Todas las peticiones a endpoints protegidos requieren un token JWT válido en el
    - API REST: `http://localhost:8080/api/`
    - Documentación Swagger: `http://localhost:8080/swagger-ui.html`
 
-## 📄 Documentación
+## Documentación Técnica
 
 - **API Interactiva**: Accede a la documentación Swagger en `http://localhost:8080/swagger-ui.html`
-## 👨‍💻 Autor
+
+## Información del Desarrollador
 
 <div align="center">
   <img src="https://avatars.githubusercontent.com/u/10578?v=4" alt="Perfil" width="100" style="border-radius:50%"/>
