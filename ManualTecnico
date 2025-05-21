@@ -1,0 +1,106 @@
+Roles definidos
+
+ROL_ADMIN: Administrador general del sistema.
+
+ROL_DOCENTE: Usuario con permisos para gestionar materias y evaluaciones docentes.
+
+ROL_ESTUDIANTE: Usuario con permisos para consultar materias, inscribirse y gestionar su perfil.
+
+Endpoints principales
+
+Autenticación
+
+POST /api/auth/signup — Registrar usuario
+
+POST /api/auth/login — Login y obtener token JWT
+
+POST /api/auth/logout — Cerrar sesión
+
+GET /api/auth/session-info — Información de sesión activa
+
+Docentes
+
+GET /api/docentes — Listar docentes
+
+GET /api/docentes/empleado/{nroEmpleado} — Obtener docente por número empleado
+
+POST /api/docentes — Crear docente
+
+PUT /api/docentes/{id} — Actualizar docente
+
+DELETE /api/docentes/{id} — Eliminar docente
+
+GET /api/docentes/{nroEmpleado}/materias — Listar materias asignadas a docente
+
+Estudiantes
+
+GET /api/estudiantes — Listar estudiantes
+
+GET /api/estudiantes/inscripcion/{numeroInscripcion} — Obtener estudiante por número inscripción
+
+POST /api/estudiantes — Crear estudiante
+
+PUT /api/estudiantes/{id} — Actualizar estudiante
+
+PUT /api/estudiantes/{id}/baja — Dar de baja estudiante
+
+GET /api/estudiantes/{id}/materias — Materias inscritas del estudiante
+
+GET /api/estudiantes/{id}/lock — Obtener estudiante con bloqueo (ejemplo de concurrencia)
+
+GET /api/estudiantes/activos — Listar estudiantes activos
+
+Materias
+
+GET /api/materias — Listar materias
+
+GET /api/materias/{id} — Obtener materia por ID
+
+GET /api/materias/codigo/{codigoUnico} — Obtener materia por código único
+
+POST /api/materias — Crear materia
+
+PUT /api/materias/{id} — Actualizar materia
+
+DELETE /api/materias/{id} — Eliminar materia
+
+PUT /api/materias/{materiaId}/asignar-docentes — Asignar docentes a materia
+
+GET /api/materias/formaria-circulo/{materiaId}/{prerequisitoId} — Verificar ciclos en prerequisitos
+
+Inscripciones
+
+GET /api/inscripciones — Listar todas las inscripciones
+
+GET /api/inscripciones/estudiante/{idEstudiante} — Inscripciones por estudiante
+
+GET /api/inscripciones/materia/{idMateria} — Inscripciones por materia
+
+GET /api/inscripciones/{id} — Obtener inscripción por ID
+
+POST /api/inscripciones — Crear inscripción
+
+PUT /api/inscripciones/{id} — Actualizar inscripción
+
+PUT /api/inscripciones/{id}/abandonar — Abandonar inscripción
+
+Evaluaciones Docente
+
+POST /api/evaluaciones-docente — Crear evaluación
+
+GET /api/evaluaciones-docente/{id} — Obtener evaluación por ID
+
+GET /api/evaluaciones-docente/docente/{docenteId} — Evaluaciones de docente
+
+DELETE /api/evaluaciones-docente/{id} — Eliminar evaluación
+
+Configuración importante
+
+Base de datos PostgreSQL con conexión en application.properties
+
+Redis para cache configurado para mejorar rendimiento
+
+Seguridad JWT configurada para autenticación y autorización
+
+Swagger UI disponible en /swagger-ui.html
+
