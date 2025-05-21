@@ -230,9 +230,9 @@ Las solicitudes a endpoints protegidos requieren autenticación mediante token J
 
 <div align="center">
   <img src="https://avatars.githubusercontent.com/u/10578?v=4" alt="Perfil" width="100" style="border-radius:50%"/>
-  <h3>Harold Ruddy Quispe Hilari</h3>
-  <p>CI: 8432642</p>
+  <h3>Marco Ronaldo Callisaya Vargas</h3>
   <p>Universidad Mayor de San Andrés</p>
+  <p>Carrera de Informatica</p>
   <p>La Paz, Bolivia</p>
 
 [![GitHub](https://img.shields.io/badge/GitHub-HAjiMe--0-181717?style=flat&logo=github)](https://github.com/HAjiMe-0)
