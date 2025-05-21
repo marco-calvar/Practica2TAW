@@ -235,7 +235,7 @@ Las solicitudes a endpoints protegidos requieren autenticación mediante token J
   <p>Carrera de Informatica</p>
   <p>La Paz, Bolivia</p>
 
-[![GitHub](https://img.shields.io/badge/Marco--0-181717?style=flat&logo=github)](https://github.com/marco-calvar)
+[![GitHub](https://img.shields.io/badge/Marco-Calvar-181717?style=flat&logo=github)](https://github.com/marco-calvar)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Harold_Quispe-0077B5?style=flat&logo=linkedin)](https://linkedin.com/in/harold-quispe)
 </div>
 
