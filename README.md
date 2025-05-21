@@ -9,7 +9,7 @@
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![UMSA](https://img.shields.io/badge/UMSA-2025-blue.svg)
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Logo_de_la_Universidad_Mayor_de_San_Andr%C3%A9s.png" alt="UMSA Logo" width="180"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Umsa-logo.svg/500px-Umsa-logo.svg.png" alt="UMSA Logo" width="180"/>
 
 </div>
 
@@ -241,6 +241,6 @@ Las solicitudes a endpoints protegidos requieren autenticación mediante token J
 ---
 
 <div align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Logo_de_la_Universidad_Mayor_de_San_Andr%C3%A9s.png" alt="UMSA Logo" width="120"/>
+  <img src="hhttps://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Umsa-logo.svg/500px-Umsa-logo.svg.png" alt="UMSA Logo" width="120"/>
    <p>© 2025 Universidad Mayor de San Andrés</p>
 </div>
